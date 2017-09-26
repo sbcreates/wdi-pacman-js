@@ -123,7 +123,11 @@ function processInput(key) {
 // Function to eat ghosts
 
 function eatGhost(ghost) {
-  if (!ghost.edible){
+  if (ghost.edible){
+    console.log(`\nYou just ate ${ghost.name} you bastard. He/she was so ${ghost.character}`);
+    score += 200;
+    ghost.edible = false;
+  } else {
     lives--;
     console.log(`\n${ghost.colour} ${ghost.name} ate you!`);
   }
