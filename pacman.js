@@ -66,7 +66,9 @@ function displayMenu() {
   console.log('(2) Eat Blinky');
   console.log('(3) Eat Pinky');
   console.log('(4) Eat Clyde');
-  console.log('(p) POWER PELLETS');
+  if (powerPellets > 0){
+    console.log('(p) POWER PELLETS');
+  };
   console.log('(q) Quit');
 }
 
@@ -106,7 +108,11 @@ function processInput(key) {
       eatGhost(ghosts[3]);
       break;
     case 'p':
-      eatPowerPellet();
+      if (powerPellets > 0){
+        eatPowerPellet();
+      } else {
+        console.log("\n*********!!!NO POWER PELLETS LEFT!!!*********");
+      }
       break;
     default:
       console.log('\nInvalid Command!');
