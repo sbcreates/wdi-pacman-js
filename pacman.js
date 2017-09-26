@@ -36,7 +36,7 @@ var clyde = {
   edible: false
 }
 
-// replace this comment with your four ghosts setup as objects
+var ghosts = [inky, blinky, pinky, clyde]
 
 
 
@@ -61,6 +61,10 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  console.log('(1) Eat Inky');
+  console.log('(2) Eat Blinky');
+  console.log('(3) Eat Pinky');
+  console.log('(4) Eat Clyde');
   console.log('(q) Quit');
 }
 
