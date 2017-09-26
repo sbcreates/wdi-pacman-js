@@ -1,11 +1,12 @@
 // Setup initial game stats
 var score = 0;
 var lives = 2;
+var powerPellets = 4;
 
 
 // Define your ghosts here
 var inky = {
-  menu_option: '1',
+  menuOption: '1',
   name: 'Inky',
   colour: 'Red',
   character: 'Shadow',
@@ -13,7 +14,7 @@ var inky = {
 }
 
 var blinky = {
-  menu_option: '2',
+  menuOption: '2',
   name: 'Blinky',
   colour: 'Cyan',
   character: 'Speedy',
@@ -21,7 +22,7 @@ var blinky = {
 }
 
 var pinky = {
-  menu_option: '3',
+  menuOption: '3',
   name: 'Pinky',
   colour: 'Pink',
   character: 'Bashful',
@@ -29,7 +30,7 @@ var pinky = {
 }
 
 var clyde = {
-  menu_option: '4',
+  menuOption: '4',
   name: 'Clyde',
   colour: 'Orange',
   character: 'Pokey',
@@ -55,7 +56,7 @@ function clearScreen() {
 }
 
 function displayStats() {
-  console.log('Score: ' + score + '     Lives: ' + lives);
+  console.log('Score: ' + score + '     Lives: ' + lives + '\n\nPower-Pellets: ' + powerPellets);
 }
 
 function displayMenu() {
