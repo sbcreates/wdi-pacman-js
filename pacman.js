@@ -66,6 +66,7 @@ function displayMenu() {
   console.log('(2) Eat Blinky');
   console.log('(3) Eat Pinky');
   console.log('(4) Eat Clyde');
+  console.log('(p) POWER PELLETS');
   console.log('(q) Quit');
 }
 
@@ -104,6 +105,9 @@ function processInput(key) {
     case '4':
       eatGhost(ghosts[3]);
       break;
+    case 'p':
+      eatPowerPellet();
+      break;
     default:
       console.log('\nInvalid Command!');
   }
@@ -124,6 +128,16 @@ function isGameOver() {
   if (lives < 0){
     process.exit();
   }
+}
+
+// Process eat power pellets
+function eatPowerPellet() {
+  score += 50;
+  ghosts.forEach(
+    function(each_ghost) {
+    each_ghost.edible = true;
+  });
+  powerPellets--;
 }
 
 
