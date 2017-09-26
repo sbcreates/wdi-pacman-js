@@ -91,8 +91,30 @@ function processInput(key) {
     case 'd':
       eatDot();
       break;
+    case '1':
+      eatGhost(ghosts[0]);
+      break;
+    case '2':
+      eatGhost(ghosts[1]);
+      break;
+    case '3':
+      eatGhost(ghosts[2]);
+      break;
+    case '4':
+      eatGhost(ghosts[3]);
+      break;
     default:
       console.log('\nInvalid Command!');
+
+  }
+}
+
+// Function to eat ghosts
+
+function eatGhost(ghost) {
+  if (!ghost.edible){
+    lives--;
+    console.log(`\n${ghost.colour} ${ghost.name} ate you!`);
   }
 }
 
