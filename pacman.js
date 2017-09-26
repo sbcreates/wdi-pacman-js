@@ -105,8 +105,8 @@ function processInput(key) {
       break;
     default:
       console.log('\nInvalid Command!');
-
   }
+  isGameOver();
 }
 
 // Function to eat ghosts
@@ -115,6 +115,13 @@ function eatGhost(ghost) {
   if (!ghost.edible){
     lives--;
     console.log(`\n${ghost.colour} ${ghost.name} ate you!`);
+  }
+}
+
+// Process game over
+function isGameOver() {
+  if (lives < 0){
+    process.exit();
   }
 }
 
