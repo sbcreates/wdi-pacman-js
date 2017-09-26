@@ -62,10 +62,15 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
-  console.log('(1) Eat Inky');
-  console.log('(2) Eat Blinky');
-  console.log('(3) Eat Pinky');
-  console.log('(4) Eat Clyde');
+  ghosts.forEach(
+    function (currentGhost) {
+      console.log(`(${currentGhost.menuOption}) Eat ${currentGhost.name}` + ( currentGhost.edible ? " (edible)" : " (inedible)" ) );
+    }
+  )
+  // console.log('(1) Eat Inky');
+  // console.log('(2) Eat Blinky');
+  // console.log('(3) Eat Pinky');
+  // console.log('(4) Eat Clyde');
   if (powerPellets > 0){
     console.log('(p) POWER PELLETS');
   };
